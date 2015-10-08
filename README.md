@@ -1,3 +1,3 @@
 # Front-end Toolkit
 
-Helpful tools.
+Tools for front-end development.
