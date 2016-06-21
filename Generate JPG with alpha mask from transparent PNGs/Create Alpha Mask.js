@@ -226,13 +226,11 @@ try {
   doc.activeLayer = mask;
   addColorOverlayToActiveLayer();
 
-  // Resize canvas to fit both images with 10px in between
+  // Resize canvas to fit both images
   var width = doc.width;
   var height = doc.height;
-  var offset = width + 10;
-  var newWidth = width + offset;
-  doc.resizeCanvas(newWidth, height, AnchorPosition.MIDDLELEFT);
-  mask.translate(offset, 0);
+  doc.resizeCanvas(width, height * 2, AnchorPosition.TOPLEFT);
+  mask.translate(0, height);
 
   // Create a black background for the mask
   addBlackFillLayer();
